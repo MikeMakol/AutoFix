@@ -70,23 +70,23 @@ c) AS AN ADMIN I CAN
 * refer mechanic to the user based on the rates and feedback
 
 d) DATABASE COLLECTION
-The database will maintain all records about the mechanic shop details and user details in this application. So that it is easy to access and retrieve data from the database. The user can search the nearby mechanics shop which is stored in the database.
-User details and business owner details are stored in database and it can be viewed by admin.
-The admin will provide approval for the registered business. The admin will keep on checking the feedback of the user to know the service provided by the mechanic shop. 
+* The database will maintain all records about the mechanic shop details and user details in this application. So that it is easy to access and retrieve data from the database. The user can search the nearby mechanics shop which is stored in the database.
+* User details and business owner details are stored in database and it can be viewed by admin.
+* The admin will provide approval for the registered business. The admin will keep on checking the feedback of the user to know the service provided by the mechanic shop. 
 
 e) GOOGLE APIs
-uses Google Map APIs to help mechanics trace the user's location
+* uses Google Map APIs to help mechanics trace the user's location
 
 4. HOW TO INSTALL AND RUN THIS PROJECT
 
 These are instructions on how you can set up this project locally on your machine.
-a) Get a free API Key at https://developers.google.com/maps/documentation/javascript/get-api-key
-b) Clone the repo
-      git clone https://github.com/MikeMakol/AutoFix.git
-c) Install NPM packages
-       npm install
-d) Enter your API in config.js
-    const API_KEY = 'ENTER YOUR API';
+* Get a free API Key at https://developers.google.com/maps/documentation/javascript/get-api-key
+* Clone the repo
+    * git clone https://github.com/MikeMakol/AutoFix.git
+* Install NPM packages
+    * npm install
+* Enter your API in config.js
+    * const API_KEY = 'ENTER YOUR API';
 
 5.HOW TO CONTRIBUTE TO THIS PROJECT
 
@@ -101,8 +101,8 @@ If you have a suggestion that would make this better, please fork the repo and c
     * Open a Pull Request
 
 CONTACT US
-mikemakol45@gmail.com
-Project Link: https://github.com/MikeMakol/AutoFix
+* mikemakol45@gmail.com
+* Project Link: https://github.com/MikeMakol/AutoFix
 
 LICENSE
-Distributed under the AutoFix License. See https://github.com/MikeMakol/AutoFix/LICENSE.txt for more information
+* Distributed under the AutoFix License. See https://github.com/MikeMakol/AutoFix/* LICENSE.txt for more information
