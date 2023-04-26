@@ -23,23 +23,22 @@ get nearby area mechanics by searching at anytime and anywhere. The admin can ac
 details and check whether the registered shop is licensed or not and provide approval. 
 
 Existing System
- In an existing system there are users who have their own mechanic number and it is also
+* In an existing system there are users who have their own mechanic number and it is also
 difficult for them to arrive at time.
- And it is also possible to find out the suitable mechanic for the desired service at remote
+* And it is also possible to find out the suitable mechanic for the desired service at remote
 locations.
- The only way is to look for any other transportation at that time of issue and then they
+* The only way is to look for any other transportation at that time of issue and then they
 need to get a mechanic to the particular location at which they have left their vehicle.
 
 Proposed system
- The proposed application helps to find the nearby mechanics easily and quickly.
- This application show the user location and direct the nearest service provider to the
+* The proposed application helps to find the nearby mechanics easily and quickly.
+* This application show the user location and direct the nearest service provider to the
 user.
- It allows us to search the nearby mechanics from different locations and call to the
-mechanic anytime, anywhere.
- Reduce prices of the service for the user compared to normal prices.
- Help users to view the credentials of a mechanic through their profile.
- Helps users to get quality services from best mechanics
- Helps mechanics find their clients
+* It allows us to search the nearby mechanics from different locations and call to the mechanic anytime, anywhere.
+* Reduce prices of the service for the user compared to normal prices.
+* Help users to view the credentials of a mechanic through their profile.
+* Helps users to get quality services from best mechanics
+* Helps mechanics find their clients
 
 3. HOW TO USE THIS APPLICATION
 
