@@ -100,8 +100,8 @@ If you have a suggestion that would make this better, please fork the repo and c
     * Open a Pull Request
 
 CONTACT US
-* mikemakol45@gmail.com
+* Author Link: mikemakol45@gmail.com
 * Project Link: https://github.com/MikeMakol/AutoFix
 
 LICENSE
-* Distributed under the AutoFix License. See https://github.com/MikeMakol/AutoFix/* LICENSE.txt for more information
+* Distributed under the AutoFix License. See LICENSE.txt for more information
