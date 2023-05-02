@@ -6,31 +6,159 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 		<meta name='robots' content='noindex, nofollow, noarchive' />
-		<meta name="default-theme-mode" content="dark" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" >
 		<link rel="stylesheet" type="text/css" href="./assets/index.css" />
 		<link rel="stylesheet" type="text/css" href="./assets/default.css" />
     </head>
 	<body>
-		<div class="bodyDiv">
-			<img class="img" src="./assets/images/61nTuLYI7pL._SL1000_.jpg" alt="world map" />
-			<span class="menuBtn">
-				<i class="fa fa-menu-bar fa-fw fa-bars"></i>
+		<div id="map" class="bodyDiv">
+			<!-- menu bar on top left side of the landing page -->
+			<span id="menuBtn">
+				<i class="fa fa-menu-bar fa-fw fa-bars" onclick="openMenu()"></i>
 			</span>
-			<div class="signDiv">
+			<!-- menu page -->
+			<div id="menuPage">
+				<nav class="exPan">
+					<ul class="uList">
+						<li class="mnLi mgSp">
+							<span class="spLi">
+								<span class="sett">Setting</span>
+								<i id="paIcon" class="fa fa-fw fa-times icon" onclick="closeMenu()"></i>
+							</span>
+						</li>
+						<li class="mnLi paup" id="libtn">
+							<button class="btn btn-primary btim" type="button" onclick="openLogIn()">Log In</button>
+						</li>
+						<li class="mnLi paup">
+							<button id="subtn" class="btn btn-primary btim" type="button" onclick="openSignUp()">Sign up</button>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="cleImg fa fa-fw fa-user icon"></i>
+								<span class="userName item">Username</span>
+								<!-- <span class="item itemCl">View profile</span> -->
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fas fa-car icon"></i>
+								<span class="item itemCl">My Breakdowns</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-user icon"></i>
+								<span class="item itemCl">Promotions</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-map-marker icon"></i>
+								<span class="item itemCl">Location</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-language"></i>
+								<span class="item itemCl">Language</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-refresh icon"></i>
+								<span class="item itemCl">Update App</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-question-circle icon"></i>
+								<span class="item itemCl">Help</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-check-square-o icon"></i>
+								<span class="item itemCl">Terms & Policy</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-bug icon"></i>
+								<span class="item itemCl">Report a problem</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-info-circle icon"></i>
+								<span class="item itemCl">About</span>
+							</span>
+						</li>
+						<li class="mnLi">
+							<span class="spLi">
+								<i class="fa fa-fw fa-sign-out icon"></i>
+								<span class="item itemCl">Log out</span>
+							</span>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!-- overlay background -->
+			<div id="overlay" class="overlay" onclick="openMenu()"></div>
+			<div id="signAllDiv" class="signDiv">
+				<!-- chose account -->
+				<div id="choseAcct" class="chAcct">
+					<div class="_rcS6">
+						<header class="_O9tz">
+							<div class="xAS2">
+								<h1 class="qghd">AutoFix</h1>
+							</div>
+						</header>
+						<section class="_zE11">
+							<div class="_fss8">
+								<div class="_Gho0 blsp">
+									<h3 class="M2hD">Chose account to sign up with</h3>
+								</div>
+								<div>
+									<div class="suCbtn">
+										<button id="userBtn" class="crBtn btn-primary" type="submit">User</button>
+									</div>
+								</div>
+								<div class="_fa44">
+									<div class="hrSl"></div>
+									<div class="tReK">or</div>
+									<div class="hrSl"></div>
+								</div>
+								<div>
+									<div class="suCbtn">
+										<button id="mechanicBtn" class="pdWd crBtn btn-primary" type="submit">Mechanic</button>
+									</div>
+								</div>
+							</div>
+							<div class="_tXct magUp">
+								<p class="tx01">
+									Already have an account? 
+									<a id="lica" href="">Log in</a>
+								</p>
+							</div>
+						</section>
+					</div>
+				</div>
 				<!-- sign up page for user -->
-				<div class="suUser">
+				<div id="user" class="suUser">
 					<div class="_rcS6">
 						<header class="_O9tz">
 							<div class="xAS1">
 								<h1 class="qghd">AutoFix</h1>
 							</div>
+							<span id="suuArrow" class="clipArrow">
+								<i class="fa fa-fw fa-times flal"></i>
+							</span>
 						</header>
 						<section class="_zE11">
 							<form class="_fss8" method="post">
 								<div class="_Gho0">
-									<h3 class="M2hD">Sign up and make use of AutoFix easy</h3>
+									<h3 class="M2hD">Sign up as a normal user and a find nearby mechanic</h3>
 								</div>
 								<div class="_jteR"> <!--log in with other apps-->
 									<a class="fa fa-app fa-facebook" href=""></a>
@@ -80,18 +208,6 @@
 										</label>
 										<div class="oPPa"></div> <!-- for a tooltip text on required -->
 										<div class="eRoy"></div> <!-- for a tooptip text on error-->
-									</div>
-								</div>
-								<div class="_F00n">
-									<div class="ee99">
-										<label class="l93s">
-											<input class="E3ss" type="password" name="confirmpassword" value="" placeholder="Confirm Password" aria-label="Confirm Password" required="true" autocorrect="off" autocapitalize="off" />
-											<div class="mC0v">
-												<button class="R33s" type="button">Show</button>
-											</div>
-										</label>
-										<div class="w55a"></div> <!-- for a tooltip text on required -->
-										<div class="xfa6"></div> <!-- for a tooptip text on error-->
 									</div>
 								</div>
 								<div class="_F00n">
@@ -374,31 +490,37 @@
 							<div class="_tXct">
 								<p class="tx01">
 									Already have an account? 
-									<a class="litx" href="" tabindex="0">Log in</a>
+									<a href="" tabindex="0">Log in</a>
 								</p>
 							</div>
 						</section>
 					</div>
 				</div>
 				<!-- sign up page for mechanic -->
-				<div class="suMechanic"><!--_cSe0 was here-->
+				<div id="mechanic" class="suMechanic">
 					<div class="_rcS6">
 						<header class="_O9tz">
+							<span id="arrow" class="bwArrow" onclick="arrowBack()">
+								<i class="fa fa-fw fa-long-arrow-left flal"></i>
+							</span>
 							<div class="xAS1">
 								<h1 class="qghd">AutoFix</h1>
 							</div>
+							<span id="sumArrow" class="clipArrow">
+								<i class="fa fa-fw fa-times flal"></i>
+							</span>
 						</header>
 						<section class="_zE11">
 							<form class="_fss8" method="post">
 								<div class="_Gho0">
-									<h3 class="M2hD">Sign up and make use of AutoFix easy</h3>
+									<h3 class="M2hD">Sign up as a mechanic to approve your AutoFix's accoumt</h3>
 								</div>
 								<div class="_jteR"> <!--log in with other apps-->
-									<a class="fa fa-facebook" href=""></a>
-									<a class="fa fa-twitter" href=""></a>
-									<a class="fa fa-instagram" href=""></a>
-									<a class="fa fa-google" href=""></a>
-									<a class="fa fa-linkedin" href=""></a>
+									<a class="fa fa-app fa-facebook" href=""></a>
+									<a class="fa fa-app fa-twitter" href=""></a>
+									<a class="fa fa-app fa-instagram" href=""></a>
+									<a class="fa fa-app fa-google" href=""></a>
+									<a class="fa fa-app fa-linkedin" href=""></a>
 								</div>
 								<div class="_fa44">
 									<div class="hrSl"></div>
@@ -441,18 +563,6 @@
 										</label>
 										<div class="oPPa"></div> <!-- for a tooltip text on required -->
 										<div class="eRoy"></div> <!-- for a tooptip text on error-->
-									</div>
-								</div>
-								<div class="_F00n">
-									<div class="ee99">
-										<label class="l93s">
-											<input class="E3ss" type="password" name="confirmpassword" value="" placeholder="Confirm Password" aria-label="Confirm Password" required="true" autocorrect="off" autocapitalize="off" />
-											<div class="mC0v">
-												<button class="R33s" type="button">Show</button>
-											</div>
-										</label>
-										<div class="w55a"></div> <!-- for a tooltip text on required -->
-										<div class="xfa6"></div> <!-- for a tooptip text on error-->
 									</div>
 								</div>
 								<div class="_F00n">
@@ -732,8 +842,8 @@
 								</div>
 								<div class="_F00n">
 									<div class="ee99">
-										<label class="l93s">
-											<textarea class="D2ss B022" name="address" value="" aria-label="Add your addres" required="true" autocorrect="off" autocapitalize="off">Add your place of work...</textarea>
+										<label class="l93s tAhg">
+											<textarea class="D2ss B022" name="address" value="" placeholder="Add your address..." aria-label="Add your addres" required="true" autocorrect="off" autocapitalize="off"></textarea>
 										</label>
 										<div class="G00e"></div> <!-- for a tooltip text on required -->
 									</div>
@@ -752,7 +862,77 @@
 							<div class="_tXct">
 								<p class="tx01">
 									Already have an account? 
-									<a class="litx" href="" tabindex="0">Log in</a>
+									<a id="" href="">Log in</a>
+								</p>
+							</div>
+						</section>
+					</div>
+				</div>
+				<!-- log in page -->
+				<div id="logIn" class="lgPage">
+					<div class="_rcS6">
+						<header class="_O9tz">
+							<div class="xAS1">
+								<h1 class="qghd">AutoFix</h1>
+							</div>
+							<span id="liArrow" class="clipArrow">
+								<i class="fa fa-fw fa-times flal"></i>
+							</span>
+						</header>
+						<section class="_zE11">
+							<form class="_fss8" method="get">
+								<div class="_Gho0">
+									<h3 class="M2hD">Sign in with other apps below or just log in if you have an account.</h3>
+								</div>
+								<div class="_jteR"> <!--log in with other apps-->
+									<a class="fa fa-app fa-facebook" href=""></a>
+									<a class="fa fa-app fa-twitter" href=""></a>
+									<a class="fa fa-app fa-instagram" href=""></a>
+									<a class="fa fa-app fa-google" href=""></i></a>
+									<a class="fa fa-app fa-linkedin" href=""></i></a>
+								</div>
+								<div class="_fa44">
+									<div class="hrSl"></div>
+									<div class="tReK">or</div>
+									<div class="hrSl"></div>
+								</div>
+								<div class="_F00n">
+									<div class="ee99">
+										<label class="l93s">
+											<input class="D2ss B022" type="text" name="emailOrPhone" value="" placeholder="Email or Phone number" aria-label="Email or Phone number" required="true" autocorrect="off" autocomplete="Email" autocapitalize="off" />
+										</label>
+										<div class="R5tu"></div> <!-- for a tooltip text on required -->
+										<div class="Q22z"></div> <!-- for a tooptip text on error-->
+									</div>
+								</div>
+								<div class="_F00n">
+									<div class="ee99">
+										<label class="l93s">
+											<input class="E3ss" type="password" name="password" value="" placeholder="Password" aria-label="Password" required="true" autocorrect="off" autocapitalize="off" />
+											<div class="mC0v">
+												<button class="R33s" type="button">Show</button>
+										  </div>
+										</label>
+										<div class="E00x"></div> <!-- for a tooltip text on required -->
+										<div class="Upl6"></div> <!-- for a tooptip text on error-->
+									</div>
+								</div>
+								<div class="_suct">
+									<div class="sucn">
+										<button class="btn btn-primary sutx" type="submit">Log In</button>
+									</div>
+								</div>
+							</form>
+							<div class="_tXct">
+								<p class="tx01">
+									Forgot your password? 
+									<a class="litx" href="" tabindex="0"> Get help</a>
+								</p>
+							</div>
+							<div class="_tXct">
+								<p class="tx01">
+									Don't have AutoFix's account? 
+									<a id="" href=""> Sign up</a>
 								</p>
 							</div>
 						</section>
@@ -760,6 +940,10 @@
 				</div>
 		  </div>
 		</div>
+		<!-- <script>
+			(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+			  key: "AIzaSyBOSSEfy0NOx1aR6GpveK_aL0eqeNNfRbc",});
+		</script> -->
 		<script type="text/javascript" src="./src/index.js"></script>
 	</body>
 </html>
