@@ -11,8 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="./assets/index.css" />
 		<link rel="stylesheet" type="text/css" href="./assets/default.css" />
     </head>
-	<body>
-		<div id="map" class="bodyDiv">
+	<body id="mapDiv" class="wlBd">
+		<div class="bodyDiv">
 			<!-- menu bar on top left side of the landing page -->
 			<span id="menuBtn">
 				<i class="fa fa-menu-bar fa-fw fa-bars" onclick="openMenu()"></i>
@@ -113,6 +113,9 @@
 							<div class="xAS2">
 								<h1 class="qghd">AutoFix</h1>
 							</div>
+							<span id="caArrow" class="clipArrow">
+								<i class="fa fa-fw fa-times flal"></i>
+							</span>
 						</header>
 						<section class="_zE11">
 							<div class="_fss8">
@@ -148,6 +151,9 @@
 				<div id="user" class="suUser">
 					<div class="_rcS6">
 						<header class="_O9tz">
+							<span id="arrow1" class="bwArrow" onclick="arrowBackUser()">
+								<i class="fa fa-fw fa-long-arrow-left flal"></i>
+							</span>
 							<div class="xAS1">
 								<h1 class="qghd">AutoFix</h1>
 							</div>
@@ -500,7 +506,7 @@
 				<div id="mechanic" class="suMechanic">
 					<div class="_rcS6">
 						<header class="_O9tz">
-							<span id="arrow" class="bwArrow" onclick="arrowBack()">
+							<span id="arrow2" class="bwArrow" onclick="arrowBackMechanic()">
 								<i class="fa fa-fw fa-long-arrow-left flal"></i>
 							</span>
 							<div class="xAS1">
@@ -940,10 +946,8 @@
 				</div>
 		  </div>
 		</div>
-		<!-- <script>
-			(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-			  key: "AIzaSyBOSSEfy0NOx1aR6GpveK_aL0eqeNNfRbc",});
-		</script> -->
+		<!-- <div id="mapDiv" class="mapDiv"></div> -->
+		<script  src="https://www.google.com/maps/api/js?key=AIzaSyBOSSEfy0NOx1aR6GpveK_aL0eqeNNfRbc&callback=initMap"></script>
 		<script type="text/javascript" src="./src/index.js"></script>
 	</body>
 </html>
