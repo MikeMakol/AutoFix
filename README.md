@@ -87,7 +87,15 @@ These are instructions on how you can set up this project locally on your machin
 * Enter your API in config.js
     * const API_KEY = 'ENTER YOUR API';
 
-5.HOW TO CONTRIBUTE TO THIS PROJECT
+5.Build with:
+* HTML
+* CSS
+* JAVASCRIPT
+* FONT AWESOME
+* GOOGLE-FONTS
+* GOOGLE MAP APIs    
+
+6.HOW TO CONTRIBUTE TO THIS PROJECT
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
@@ -100,8 +108,10 @@ If you have a suggestion that would make this better, please fork the repo and c
     * Open a Pull Request
 
 CONTACT US
+* Project Author: Mike Makol
 * Author Link: mikemakol45@gmail.com
 * Project Link: https://github.com/MikeMakol/AutoFix
+* Project url: https://autofix-app.netlify.app
 
 LICENSE
 * Distributed under the AutoFix License. See LICENSE.txt for more information
