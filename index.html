@@ -11,8 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="./assets/index.css" />
 		<link rel="stylesheet" type="text/css" href="./assets/default.css" />
     </head>
-	<body class="wlBd">
-		<div class="bodyDiv">
+	<body class="wlBd" onclick="closeDetails()">
+		<div id="parentDiv" class="bodyDiv">
 			<!-- menu bar on top left side of the landing page -->
 			<span id="menuBtn">
 				<i class="fa fa-menu-bar fa-fw fa-bars" onclick="openMenu()"></i>
@@ -623,9 +623,7 @@
 												<option value="bq">Bonaire, Sint Eustatius and Saba</option>
 												<option value="ba">Bosnia and Herzegovina</option>
 												<option value="bw">Botswana</option>
-												<!-- <option value="bv">Bouvet Island</option> -->
 												<option value="br">Brazil</option>
-												<!-- <option value="io">British Indian Ocean Territory (the)</option> -->
 												<option value="bn">Brunei Darussalam</option>
 												<option value="bg">Bulgaria</option>
 												<option value="bf">Burkina Faso</option>
@@ -944,7 +942,83 @@
 						</section>
 					</div>
 				</div>
-		  </div>
+		    </div>
+			<div id="locate" class="lctDiv">
+				<div id="smLocate" onclick="showDetails()">
+					<div class="sazz">
+						<form>
+							<div class="ee99">
+								<label class="l93s">
+									<input class="D2ss B022" type="text" name="location" value="" placeholder="Where are you at?" aria-label="Where are you at?" readonly />
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="lgLocate">
+					<div class="sazz">
+						<section class="_zE11">
+							<form class="_fss8" method="post">
+								<div class="_F00n">
+									<div class="ee99">
+										<label class="l93s">
+											<input class="D2ss B022" type="text" name="location" value="" placeholder="Location of breakdown" aria-label="Location of breakdown" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
+										</label>
+										<div class="qcON"></div> <!-- for a tooltip text on required -->
+									</div>
+								</div>
+								<div class="_F00n">
+									<div class="ee99">
+										<label class="l93s">
+											<select class="D2ss zX01" name="typeOfService" aria-label="Type of service" required="true">
+												<option value="" selected disabled>Car model</option>
+												<option value="audi">Audi</option>
+												<option value="BMW">BMW</option>
+												<option value="volkswagen">Volkswagen</option>
+												<option value="toyota">Toyota</option>
+												<option value="volvo">Volvo</option>
+												<option value="tesla">Tesla</option>
+												<option value="nissan">Nissan</option>
+											</select>
+										</label>
+										<div class="ctre"></div> <!-- for a tooltip text on required -->
+									</div>
+								</div>
+								<div class="_F00n">
+									<div class="ee99">
+										<label class="l93s">
+											<select class="D2ss zX01" name="typeOfService" aria-label="Type of service" required="true">
+												<option value="" selected disabled>Service you need?</option>
+												<option value="a faulty battery">A faulty battery</option>
+												<option value="a problem with the alternator">A problem with the alternator</option>
+												<option value="damaged tyres or wheel">Damaged tyres or wheel</option>
+												<option value="electrical faults">Electrical faults</option>
+												<option value="being locked out of the car">Being locked out of the car</option>
+												<option value="misfuelling">Misfuelling</option>
+												<option value="clutch cables">Clutch cables</option>
+												<option value="diesel particulate filters(DPF)">Diesel Particulate Filters(DPF)</option>
+												<option value="starter motor">Starter Motor</option>
+												<option value="overheating">Overheating</option>
+												<option value="lack of fuel">Lack of fuel</option>
+												<option value="high-tension leads (HT)">High-tension Leads (HT)</option>
+												<option value="mechanical problems">Mechanical problems</option>
+												<option value="distributor Cap failure">Distributor Cap failure</option>
+												<option value="other problems">Other problems</option>
+											</select>
+										</label>
+										<div class="ctre"></div> <!-- for a tooltip text on required -->
+									</div>
+								</div>
+								<div id="lookUp" class="_suct">
+									<div class="sucn">
+										<button class="btn btn-primary sutx" type="submit">Search mechanic</button>
+									</div>
+								</div>
+							</form>
+						</section>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div id="mapDiv" class="mapDiv"></div>
 		<script async defer src="https://www.google.com/maps/api/js?key=AIzaSyBOSSEfy0NOx1aR6GpveK_aL0eqeNNfRbc&callback=initMap"></script>
