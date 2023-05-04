@@ -26,38 +26,64 @@ async function initMap() {
 
 initMap();
 
-// open menu page
-document.getElementById('menuBtn').addEventListener("click", openMenu)
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('menuBtn').addEventListener("click", openMenu)
+  document.getElementById("paIcon").addEventListener("click", closeMenu)
+  document.getElementById("userBtn").addEventListener("click", displayUserSignUpPage)
+  document.getElementById("mechanicBtn").addEventListener("click", displayMechanicSignUpPage)
+  document.getElementById("lica").addEventListener("click", displayLogInPage)
+  document.getElementById("libtn").addEventListener("click", openLogIn)
+  document.getElementById("subtn").addEventListener("click", openSignUp)
+  document.getElementById("arrow1").addEventListener("click", arrowBackUser)
+  document.getElementById("arrow2").addEventListener("click", arrowBackMechanic)
+  document.getElementById('smLocate').addEventListener("click", showDetails)
+  document.getElementById('smLocate').addEventListener("click", showDetails)
 
+  //cancel log in page
+  document.getElementById("liArrow").addEventListener("click", () =>
+  document.getElementById("logIn").style.display = "none"
+  )
+  //cancel chose account page
+  document.getElementById("caArrow").addEventListener("click", () =>
+    document.getElementById("choseAcct").style.display = "none"
+  )
+
+  //cancel mechanic sign up page
+  document.getElementById("sumArrow").addEventListener("click", () =>
+    document.getElementById("mechanic").style.display = "none"
+  )
+
+  //cancel user sign up page
+  document.getElementById("suuArrow").addEventListener("click", () =>
+    document.getElementById("user").style.display = "none"
+  )
+})
+
+// open menu page
 function openMenu() {
   document.getElementById("menuPage").style.display = "block";
   document.getElementById("overlay").style.display = "block";
 }
 
 // close menu and overlay page
-document.getElementById("paIcon").addEventListener("click", closeMenu)
-
 function closeMenu() {
   document.getElementById("menuPage").style.display = "none";
   document.getElementById("overlay").style.display = "none";
 }
 
 // open user sign up page when 'User Circle' is clicked
-document.getElementById("userBtn").addEventListener("click", displayUserSignUpPage)
 function displayUserSignUpPage() {
   document.getElementById("user").style.display = "block";
   document.getElementById("choseAcct").style.display = "none";
 }
 
 // open mechanic sign up page when 'User Mechanic' is clicked
-document.getElementById("mechanicBtn").addEventListener("click", displayMechanicSignUpPage)
 function displayMechanicSignUpPage() {
   document.getElementById("mechanic").style.display = "block";
   document.getElementById("choseAcct").style.display = "none";
 }
 
 // open log in page when a 'Login' link is clicked
-document.getElementById("lica").addEventListener("click", displayLogInPage)
 function displayLogInPage() {
   document.getElementById("logIn").style.display = "block";
   document.getElementById("signAllDiv").style.display = "block";
@@ -65,36 +91,15 @@ function displayLogInPage() {
 }
 
 // open a log in page when the 'Log In' button is clicked on the menu
-document.getElementById("libtn").addEventListener("click", openLogIn)
 function openLogIn() {
   document.getElementById("menuPage").style.display = "none";
   document.getElementById("overlay").style.display = "none";
+
   document.getElementById("logIn").style.display = "block";
   document.getElementById("signAllDiv").style.display = "block";
 }
 
-//cancel log in page
-document.getElementById("liArrow").addEventListener("click", () =>
-  document.getElementById("logIn").style.display = "none"
-)
-
-//cancel chose account page
-document.getElementById("caArrow").addEventListener("click", () =>
-  document.getElementById("choseAcct").style.display = "none"
-)
-
-//cancel mechanic sign up page
-document.getElementById("sumArrow").addEventListener("click", () =>
-  document.getElementById("mechanic").style.display = "none"
-)
-
-//cancel user sign up page
-document.getElementById("suuArrow").addEventListener("click", () =>
-  document.getElementById("user").style.display = "none"
-)
-
 // open a sign up page when the 'Sign up' button is clicked on the menu
-document.getElementById("subtn").addEventListener("click", openSignUp)
 function openSignUp() {
   document.getElementById("menuPage").style.display = "none";
   document.getElementById("overlay").style.display = "none";
@@ -103,7 +108,6 @@ function openSignUp() {
 }
 
 //backward arrow on user page
-document.getElementById("arrow1").addEventListener("click", arrowBackUser)
 function arrowBackUser(){
   const choseAcct = document.getElementById("choseAcct")
   const user = document.getElementById("user")
@@ -115,7 +119,6 @@ function arrowBackUser(){
 }
 
 //backward arrow on mechanic page
-document.getElementById("arrow2").addEventListener("click", arrowBackMechanic)
 function arrowBackMechanic(){
   const choseAcct = document.getElementById("choseAcct")
   const mechanic = document.getElementById("mechanic")
@@ -127,17 +130,51 @@ function arrowBackMechanic(){
 }
 
 // show add details page
-document.getElementById('smLocate').addEventListener("click", showDetails)
-
 function showDetails() {
   // document.getElementById("locate").style.display = "block";
   document.getElementById("lgLocate").style.display = "block";
-  // document.getElementById("smLocate").style.display = "none";
 }
 
 // close add details page
-document.getElementById("map").addEventListener("click", closeDetails)
-
 function closeDetails() {
   document.getElementById("lgLocate").style.display = "none";
 }
+
+
+const form = {
+  emailorphonenumber: document.getElementById("#emailorphone"),
+  password: document.getElementById("#password"),
+  submit: document.querySelector("#submit"),
+  messages: document.getElementById("form-messages"),
+};
+let button = form.submit.addEventListener("click", (e) => {
+  e.preventDefault();
+  const login = "https://ffcc-app.herokuapp.com/user/login";
+
+  fetch(login, {
+    method: "POST",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: form.email.value,
+      password: form.password.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // on error
+      if (data.error) {
+        alert("Email and password do not match!"); /*displays error message*/
+      } else {
+        window.open(
+          "target.html"
+        ); /*opens the target page while Id & password matches*/
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
