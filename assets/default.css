@@ -1,7 +1,4 @@
 @charset "UTF-8";
-*, *::before, *::after {
-    box-sizing:border-box;
-}
 
 @media (prefers-reduced-motion: no-preference) {
 :root {
@@ -34,9 +31,6 @@ div, article, aside, figcaption, figure, footer, header, hgroup, main, nav, sect
     -webkit-flex-direction:column;
     -ms-flex-direction:column;
     flex-direction:column;
-    -webkit-flex-shrink:0;
-    -ms-flex-shrink:0;
-    flex-shrink:0;
 }
     
 html {
@@ -48,17 +42,14 @@ html {
 }
     
 html,body {
-    height:100%;
-    width: 100%;
+    height:100vh;
+    width:100vw;
 }
     
 body {
     display:block;
-    background-color:#fff;
-    /*background-color:rgba(var(--ww0,255,255,255),1);*/
-    background-image: url("./images/61nTuLYI7pL._SL1000_.jpg");
-    background-attachment: fixed;
-    background-origin: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
     direction:ltr;
 }
     
@@ -76,8 +67,7 @@ body:fullscreen{
 }
     
 body,label,input,button,textarea,select,datalist,option,optgroup {
-    color:#fff;
-    /*color:rgba(var(--wlg,159,171,189),1);*/
+    color:#212121;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-size:15px;
     font-weight:400;
@@ -153,11 +143,15 @@ ol,ul {
     overflow:hidden;
 }
     
-a:link, a:visited, a:hover, a:active {
+a:link, a:visited, a:active {
     color:#288cfb;
     /*color:rgba(var(--bbt,40,140,251),1);*/
     background-color:transparent;
     text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
 }
     
 blockquote,q {
@@ -184,7 +178,7 @@ table{
 	border:1px solid transparent;
 	border-radius:.25rem;
 	padding:.375rem .75rem;
-	line-height:1.5;
+	line-height:.1;
 	-webkit-user-select:none;
 	-moz-user-select:none;
 	-ms-user-select:none;
@@ -199,7 +193,6 @@ table{
 }
 
 .btn:hover {
-	color:#212529;
 	text-decoration:none;
 }
 .btn:focus {
@@ -385,8 +378,6 @@ table{
 .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
   position:relative;
   width:100%;
-  /*padding-right:0.75rem;
-  padding-left:0.75rem;*/
 }
 .col-1 {
   flex:0 0 8.33333%;
