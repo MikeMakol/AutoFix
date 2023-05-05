@@ -11,7 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="./assets/index.css" />
 		<link rel="stylesheet" type="text/css" href="./assets/default.css" />
     </head>
-	<body class="wlBd" onclick="closeDetails()">
+	<body class="wlBd">
 		<div id="parentDiv" class="bodyDiv">
 			<!-- menu bar on top left side of the landing page -->
 			<span id="menuBtn">
@@ -181,7 +181,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="text" name="name" value="" placeholder="Name" aria-label="name" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
+											<input id="username" class="D2ss B022" type="text" name="username" value="" placeholder="Username" aria-label="name" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
 										</label>
 										<div class="qcON"></div> <!-- for a tooltip text on required -->
 									</div>
@@ -189,7 +189,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="email" name="email" value="" placeholder="Email" aria-label="Email" required="true" autocorrect="off" autocomplete="Email" autocapitalize="off" />
+											<input id="email" class="D2ss B022" type="email" name="email" value="" placeholder="Email" aria-label="Email" required="true" autocorrect="off" autocomplete="Email" autocapitalize="off" />
 										</label>
 										<div class="G00e"></div> <!-- for a tooltip text on required -->
 										<div class="tR0x"></div> <!-- for a tooptip text on error-->
@@ -198,7 +198,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="number" name="phoneNumber" value="" placeholder="Phone number" aria-label="Phone number" required="true" autocorrect="off" autocapitalize="off" />
+											<input id="phonenumber" class="D2ss B022" type="number" name="phoneNumber" value="" placeholder="Phone number" aria-label="Phone number" required="true" autocorrect="off" autocapitalize="off" />
 										</label>
 										<div class="G00e"></div> <!-- for a tooltip text on required -->
 										<div class="tR0x"></div> <!-- for a tooptip text on error-->
@@ -207,7 +207,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="E3ss" type="password" name="password" value="" placeholder="Password" aria-label="Password" required="true" autocorrect="off" autocapitalize="off" />
+											<input id="password" class="E3ss" type="password" name="password" value="" placeholder="Password" aria-label="Password" required="true" autocorrect="off" autocapitalize="off" />
 											<div class="mC0v">
 												<button class="R33s" type="button">Show</button>
 											</div>
@@ -219,7 +219,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<select class="D2ss zX01" name="countryOrRegion" aria-label="Country or Region" required="true">
+											<select id="country" class="D2ss zX01" name="countryOrRegion" aria-label="Country or Region" required="true">
 												<option value="" selected disabled>Country or Region</option>
 												<option value="af">Afghanistan</option>
 												<option value="ax">Åland Islands</option>
@@ -477,14 +477,14 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s tAhg">
-											<textarea class="D2ss B022" name="address" value="" placeholder="Add your address..." aria-label="Add your address" required="true" autocorrect="off" autocapitalize="off"></textarea>
+											<textarea id="address" class="D2ss B022" name="address" value="" placeholder="Add your address..." aria-label="Add your address" autocorrect="off" autocapitalize="off"></textarea>
 										</label>
 										<div class="G00e"></div> <!-- for a tooltip text on required -->
 									</div>
 								</div>
 								<div class="_suct">
 									<div class="sucn">
-										<button class="btn btn-primary sutx" type="submit">Sign up</button>
+										<button id="submitUs" class="btn btn-primary sutx" type="submit">Sign up</button>
 									</div>
 								</div>
 							</form>
@@ -536,7 +536,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="text" name="name" value="" placeholder="Name" aria-label="name" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
+											<input id="username" class="D2ss B022" type="text" name="username" value="" placeholder="Username" aria-label="name" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
 										</label>
 										<div class="qcON"></div> <!-- for a tooltip text on required -->
 									</div>
@@ -544,7 +544,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="email" name="email" value="" placeholder="Email" aria-label="Email" required="true" autocorrect="off" autocomplete="Email" autocapitalize="off" />
+											<input id="email" class="D2ss B022" type="email" name="email" value="" placeholder="Email" aria-label="Email" required="true" autocorrect="off" autocomplete="Email" autocapitalize="off" />
 										</label>
 										<div class="G00e"></div> <!-- for a tooltip text on required -->
 										<div class="tR0x"></div> <!-- for a tooptip text on error-->
@@ -553,7 +553,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="number" name="phoneNumber" value="" placeholder="Phone number" aria-label="Phone number" required="true" autocorrect="off" autocapitalize="off" />
+											<input id="phonenumber" class="D2ss B022" type="number" name="phoneNumber" value="" placeholder="Phone number" aria-label="Phone number" required="true" autocorrect="off" autocapitalize="off" />
 										</label>
 										<div class="G00e"></div> <!-- for a tooltip text on required -->
 										<div class="tR0x"></div> <!-- for a tooptip text on error-->
@@ -562,7 +562,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="E3ss" type="password" name="password" value="" placeholder="Password" aria-label="Password" required="true" autocorrect="off" autocapitalize="off" />
+											<input id="password" class="E3ss" type="password" name="password" value="" placeholder="Password" aria-label="Password" required="true" autocorrect="off" autocapitalize="off" />
 											<div class="mC0v">
 												<button class="R33s" type="button">Show</button>
 											</div>
@@ -591,7 +591,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<select class="D2ss zX01" name="countryOrRegion" aria-label="Country or Region" required="true">
+											<select id="country" class="D2ss zX01" name="countryOrRegion" aria-label="Country or Region" required="true">
 												<option value="" selected disabled>Country or Region</option>
 												<option value="af">Afghanistan</option>
 												<option value="ax">Åland Islands</option>
@@ -854,7 +854,7 @@
 								</div>
 								<div class="_suct">
 									<div class="sucn">
-										<button class="btn btn-primary sutx" type="submit">Sign up</button>
+										<button id="submitMe" class="btn btn-primary sutx" type="submit">Sign up</button>
 									</div>
 								</div>
 							</form>
@@ -923,7 +923,7 @@
 								</div>
 								<div class="_suct">
 									<div class="sucn">
-										<button id="submit" class="btn btn-primary sutx" type="submit">Log In</button>
+										<button id="submitLi" class="btn btn-primary sutx" type="submit">Log In</button>
 									</div>
 								</div>
 							</form>
@@ -944,17 +944,6 @@
 				</div>
 		    </div>
 			<div id="locate" class="lctDiv">
-				<div id="smLocate" onclick="showDetails()">
-					<div class="sazz">
-						<form>
-							<div class="ee99">
-								<label class="l93s">
-									<input class="D2ss B022" type="text" name="location" value="" placeholder="Where are you at?" aria-label="Where are you at?" readonly />
-								</label>
-							</div>
-						</form>
-					</div>
-				</div>
 				<div id="lgLocate">
 					<div class="sazz">
 						<section class="_zE11">
@@ -962,7 +951,7 @@
 								<div class="_F00n">
 									<div class="ee99">
 										<label class="l93s">
-											<input class="D2ss B022" type="text" name="location" value="" placeholder="Location of breakdown" aria-label="Location of breakdown" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
+											<input class="D2ss B022" type="text" name="location" value="" placeholder="Your location?" aria-label="Location of breakdown" required="true" autocorrect="off" autocomplete="text" autocapitalize="off" />
 										</label>
 										<div class="qcON"></div> <!-- for a tooltip text on required -->
 									</div>
@@ -1011,7 +1000,7 @@
 								</div>
 								<div id="lookUp" class="_suct">
 									<div class="sucn">
-										<button class="btn btn-primary sutx" type="submit">Search mechanic</button>
+										<button id="submit" class="btn btn-primary sutx" type="submit" >Search mechanic</button>
 									</div>
 								</div>
 							</form>

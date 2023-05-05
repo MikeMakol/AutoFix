@@ -36,13 +36,33 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("subtn").addEventListener("click", openSignUp)
   document.getElementById("arrow1").addEventListener("click", arrowBackUser)
   document.getElementById("arrow2").addEventListener("click", arrowBackMechanic)
-  document.getElementById('smLocate').addEventListener("click", showDetails)
-  document.getElementById('smLocate').addEventListener("click", showDetails)
+
+  //submit search form
+  document.getElementById("submit").addEventListener("submit", (e) => {e.preventDefault()})
+
+  //submit log in form
+  document.getElementById("submitLi").addEventListener("submit", (e) => {
+    e.preventDefault()
+    e.reset()
+  })
+
+  //submit user form
+  document.getElementById("submitUs").addEventListener("submit", (e) => {
+    e.preventDefault()
+    e.reset()
+  })
+
+  //submit mechanic form
+  document.getElementById("submitMe").addEventListener("submit", (e) => {
+    e.preventDefault()
+    e.reset()
+  })
 
   //cancel log in page
   document.getElementById("liArrow").addEventListener("click", () =>
   document.getElementById("logIn").style.display = "none"
   )
+
   //cancel chose account page
   document.getElementById("caArrow").addEventListener("click", () =>
     document.getElementById("choseAcct").style.display = "none"
@@ -129,27 +149,15 @@ function arrowBackMechanic(){
   }
 }
 
-// show add details page
-function showDetails() {
-  // document.getElementById("locate").style.display = "block";
-  document.getElementById("lgLocate").style.display = "block";
-}
-
-// close add details page
-function closeDetails() {
-  document.getElementById("lgLocate").style.display = "none";
-}
-
-
+// login user or mechanic
 const form = {
   emailorphonenumber: document.getElementById("#emailorphone"),
   password: document.getElementById("#password"),
   submit: document.querySelector("#submit"),
-  messages: document.getElementById("form-messages"),
 };
 let button = form.submit.addEventListener("click", (e) => {
   e.preventDefault();
-  const login = "https://ffcc-app.herokuapp.com/user/login";
+  const login = "https://dev-dwqyajyza4vgt1ad.us.auth0.com";
 
   fetch(login, {
     method: "POST",
@@ -158,8 +166,8 @@ let button = form.submit.addEventListener("click", (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      email: form.email.value,
-      password: form.password.value,
+      email: form.emailorphonenumber,
+      password: form.password,
     }),
   })
     .then((response) => response.json())
@@ -170,7 +178,7 @@ let button = form.submit.addEventListener("click", (e) => {
         alert("Email and password do not match!"); /*displays error message*/
       } else {
         window.open(
-          "target.html"
+          "index.html"
         ); /*opens the target page while Id & password matches*/
       }
     })
@@ -178,3 +186,46 @@ let button = form.submit.addEventListener("click", (e) => {
       console.log(err);
     });
 });
+
+
+// register user
+function formValidation(form) {
+  let uid = form.user.id
+  let username = document.getElementById("username")
+  username.innerText = form.user.username
+  let email = document.getElementById("email")
+  email.innerText = form.user.email
+  let phonenumber = document.getElementById("phonenumber")
+  phonenumber.innerText = form.user.mobilePhone
+  let password = document.getElementById("password")
+  password.innerText = form.user.methods.secret
+  let ucountry = document.getElementById("country")
+  ucountry = form.user.country;
+  
+  if (username === form.user.username.value) {
+    username.value
+  } else {
+    alert("username is incorrect")
+  }
+  if (email === form.user.email.value) {
+    email.value
+  } else {
+    alert("email is incorrect")
+  }
+  if (phonenumber === form.user.mobilePhone.value) {
+    phonenumber.value
+  } else {
+    alert("phone number is invalid")
+  }
+  if (ucountry  === form.user.country.value) {
+    ucountry.value
+  } else {
+    alert("Select your country from the list")
+  }
+}
+  
+fetch("https://dev-dwqyajyza4vgt1ad.us.auth0.com")
+.then(res => res.json)
+.then(form => form.forEach(form => formValidation(form)))
+  
+  
