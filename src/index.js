@@ -38,7 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("arrow2").addEventListener("click", arrowBackMechanic)
 
   //submit search form
-  document.getElementById("submit").addEventListener("submit", (e) => {e.preventDefault()})
+  document.getElementById("submitSe").addEventListener("submit", (e) => {
+    e.preventDefault()
+    e.reset()
+  })
 
   //submit log in form
   document.getElementById("submitLi").addEventListener("submit", (e) => {
